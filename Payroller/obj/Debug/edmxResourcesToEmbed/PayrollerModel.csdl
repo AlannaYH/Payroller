@@ -1,0 +1,237 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="PayrollerModel" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+  <EntityType Name="Departamentos">
+    <Key>
+      <PropertyRef Name="Id_Departamento" />
+    </Key>
+    <Property Name="Id_Departamento" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="Nombre_Departamento" Type="String" MaxLength="70" FixedLength="false" Unicode="true" />
+    <Property Name="Ubicacion_Departamento" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
+    <Property Name="ResponsableArea_Departamento" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
+    <NavigationProperty Name="Empleados" Relationship="Self.FK__Empleados__Id_De__300424B4" FromRole="Departamentos" ToRole="Empleados" />
+  </EntityType>
+  <EntityType Name="Empleados">
+    <Key>
+      <PropertyRef Name="Id_Empleado" />
+    </Key>
+    <Property Name="Id_Empleado" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="Cedula_Empleado" Type="String" MaxLength="20" FixedLength="false" Unicode="true" />
+    <Property Name="Nombre_Empleado" Type="String" MaxLength="70" FixedLength="false" Unicode="true" />
+    <Property Name="Apellido_Empleado" Type="String" MaxLength="70" FixedLength="false" Unicode="true" />
+    <Property Name="Sexo_Empleado" Type="String" MaxLength="20" FixedLength="false" Unicode="true" />
+    <Property Name="Direccion_Empleado" Type="String" MaxLength="200" FixedLength="false" Unicode="true" />
+    <Property Name="Telefono_Empleado" Type="String" MaxLength="15" FixedLength="false" Unicode="true" />
+    <Property Name="TelefonoE_Empleado" Type="String" MaxLength="15" FixedLength="false" Unicode="true" />
+    <Property Name="Nacionalidad_Empleado" Type="String" MaxLength="60" FixedLength="false" Unicode="true" />
+    <Property Name="EstadoCivil_Empleado" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="CantidadHijos_Empleado" Type="Int32" />
+    <Property Name="Id_Departamento" Type="Int32" />
+    <Property Name="Id_Puesto" Type="Int32" />
+    <Property Name="SalarioMensual_Empleado" Type="Decimal" Precision="19" Scale="2" />
+    <Property Name="Id_TipoNomina" Type="Int32" />
+    <NavigationProperty Name="Departamentos" Relationship="Self.FK__Empleados__Id_De__300424B4" FromRole="Empleados" ToRole="Departamentos" />
+    <NavigationProperty Name="Puestos" Relationship="Self.FK__Empleados__Id_Pu__30F848ED" FromRole="Empleados" ToRole="Puestos" />
+    <NavigationProperty Name="TiposNominas" Relationship="Self.FK__Empleados__Id_Ti__31EC6D26" FromRole="Empleados" ToRole="TiposNominas" />
+    <NavigationProperty Name="RegistroTransacciones" Relationship="Self.FK__RegistroT__Id_Em__34C8D9D1" FromRole="Empleados" ToRole="RegistroTransacciones" />
+  </EntityType>
+  <EntityType Name="NivelesRiesgo">
+    <Key>
+      <PropertyRef Name="Id_NivelRiesgo" />
+    </Key>
+    <Property Name="Id_NivelRiesgo" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="Nombre_NivelRiesgo" Type="String" MaxLength="20" FixedLength="true" Unicode="true" Nullable="false" />
+    <Property Name="Detalle_NivelRiesgo" Type="String" MaxLength="200" FixedLength="true" Unicode="true" />
+    <NavigationProperty Name="Puestos" Relationship="Self.FK__Puestos__Id_Nive__239E4DCF" FromRole="NivelesRiesgo" ToRole="Puestos" />
+  </EntityType>
+  <EntityType Name="Puestos">
+    <Key>
+      <PropertyRef Name="Id_Puesto" />
+    </Key>
+    <Property Name="Id_Puesto" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="Nombre_Puesto" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="Id_NivelRiesgo" Type="Int32" />
+    <Property Name="MaximoSalario_Puesto" Type="Decimal" Precision="19" Scale="2" />
+    <Property Name="Minimo_Salario" Type="Decimal" Precision="19" Scale="2" />
+    <NavigationProperty Name="Empleados" Relationship="Self.FK__Empleados__Id_Pu__30F848ED" FromRole="Puestos" ToRole="Empleados" />
+    <NavigationProperty Name="NivelesRiesgo" Relationship="Self.FK__Puestos__Id_Nive__239E4DCF" FromRole="Puestos" ToRole="NivelesRiesgo" />
+  </EntityType>
+  <EntityType Name="RegistroTransacciones">
+    <Key>
+      <PropertyRef Name="Id_RegistroTransaccion" />
+    </Key>
+    <Property Name="Id_RegistroTransaccion" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="Id_Empleado" Type="Int32" />
+    <Property Name="Id_TipoIngreso" Type="Int32" />
+    <Property Name="Id_TipoDeduccion" Type="Int32" />
+    <Property Name="Tipo_RegistroTransaccion" Type="String" MaxLength="20" FixedLength="false" Unicode="true" />
+    <Property Name="Fecha_RegistroTransaccion" Type="DateTime" Precision="0" />
+    <Property Name="Monto_RegistroTransaccion" Type="Decimal" Precision="19" Scale="2" />
+    <Property Name="Estado_RegistroTransaccion" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="Periodo_RegistroTransaccion" Type="String" MaxLength="20" FixedLength="false" Unicode="true" />
+    <NavigationProperty Name="Empleados" Relationship="Self.FK__RegistroT__Id_Em__34C8D9D1" FromRole="RegistroTransacciones" ToRole="Empleados" />
+    <NavigationProperty Name="TiposIngresos" Relationship="Self.FK__RegistroT__Id_Ti__35BCFE0A" FromRole="RegistroTransacciones" ToRole="TiposIngresos" />
+    <NavigationProperty Name="TiposDeducciones" Relationship="Self.FK__RegistroT__Id_Ti__36B12243" FromRole="RegistroTransacciones" ToRole="TiposDeducciones" />
+  </EntityType>
+  <EntityType Name="sysdiagrams">
+    <Key>
+      <PropertyRef Name="diagram_id" />
+    </Key>
+    <Property Name="name" Type="String" MaxLength="128" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="principal_id" Type="Int32" Nullable="false" />
+    <Property Name="diagram_id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="version" Type="Int32" />
+    <Property Name="definition" Type="Binary" MaxLength="Max" FixedLength="false" />
+  </EntityType>
+  <EntityType Name="TiposDeducciones">
+    <Key>
+      <PropertyRef Name="Id_TipoDeduccion" />
+    </Key>
+    <Property Name="Id_TipoDeduccion" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="Nombre_TipoDeduccion" Type="String" MaxLength="80" FixedLength="false" Unicode="true" />
+    <Property Name="DependeSalario_TipoDeduccion" Type="String" MaxLength="2" FixedLength="false" Unicode="true" />
+    <Property Name="Estado_TipoDeduccion" Type="String" MaxLength="20" FixedLength="false" Unicode="true" />
+    <NavigationProperty Name="RegistroTransacciones" Relationship="Self.FK__RegistroT__Id_Ti__36B12243" FromRole="TiposDeducciones" ToRole="RegistroTransacciones" />
+  </EntityType>
+  <EntityType Name="TiposIngresos">
+    <Key>
+      <PropertyRef Name="Id_TipoIngreso" />
+    </Key>
+    <Property Name="Id_TipoIngreso" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="Nombre_TipoIngreso" Type="String" MaxLength="80" FixedLength="false" Unicode="true" />
+    <Property Name="DependeSalario_TipoIngreso" Type="String" MaxLength="2" FixedLength="false" Unicode="true" />
+    <Property Name="Estado_TipoIngreso" Type="String" MaxLength="20" FixedLength="false" Unicode="true" />
+    <NavigationProperty Name="RegistroTransacciones" Relationship="Self.FK__RegistroT__Id_Ti__35BCFE0A" FromRole="TiposIngresos" ToRole="RegistroTransacciones" />
+  </EntityType>
+  <EntityType Name="TiposNominas">
+    <Key>
+      <PropertyRef Name="Id_TipoNomina" />
+    </Key>
+    <Property Name="Id_TipoNomina" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="Nombre_TipoNomina" Type="String" MaxLength="70" FixedLength="true" Unicode="true" Nullable="false" />
+    <Property Name="Detalle_TipoNomina" Type="String" MaxLength="200" FixedLength="true" Unicode="true" />
+    <NavigationProperty Name="Empleados" Relationship="Self.FK__Empleados__Id_Ti__31EC6D26" FromRole="TiposNominas" ToRole="Empleados" />
+  </EntityType>
+  <Association Name="FK__Empleados__Id_De__300424B4">
+    <End Role="Departamentos" Type="Self.Departamentos" Multiplicity="0..1" />
+    <End Role="Empleados" Type="Self.Empleados" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Departamentos">
+        <PropertyRef Name="Id_Departamento" />
+      </Principal>
+      <Dependent Role="Empleados">
+        <PropertyRef Name="Id_Departamento" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__Empleados__Id_Pu__30F848ED">
+    <End Role="Puestos" Type="Self.Puestos" Multiplicity="0..1" />
+    <End Role="Empleados" Type="Self.Empleados" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Puestos">
+        <PropertyRef Name="Id_Puesto" />
+      </Principal>
+      <Dependent Role="Empleados">
+        <PropertyRef Name="Id_Puesto" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__Empleados__Id_Ti__31EC6D26">
+    <End Role="TiposNominas" Type="Self.TiposNominas" Multiplicity="0..1" />
+    <End Role="Empleados" Type="Self.Empleados" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="TiposNominas">
+        <PropertyRef Name="Id_TipoNomina" />
+      </Principal>
+      <Dependent Role="Empleados">
+        <PropertyRef Name="Id_TipoNomina" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__RegistroT__Id_Em__34C8D9D1">
+    <End Role="Empleados" Type="Self.Empleados" Multiplicity="0..1" />
+    <End Role="RegistroTransacciones" Type="Self.RegistroTransacciones" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Empleados">
+        <PropertyRef Name="Id_Empleado" />
+      </Principal>
+      <Dependent Role="RegistroTransacciones">
+        <PropertyRef Name="Id_Empleado" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__Puestos__Id_Nive__239E4DCF">
+    <End Role="NivelesRiesgo" Type="Self.NivelesRiesgo" Multiplicity="0..1" />
+    <End Role="Puestos" Type="Self.Puestos" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="NivelesRiesgo">
+        <PropertyRef Name="Id_NivelRiesgo" />
+      </Principal>
+      <Dependent Role="Puestos">
+        <PropertyRef Name="Id_NivelRiesgo" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__RegistroT__Id_Ti__35BCFE0A">
+    <End Role="TiposIngresos" Type="Self.TiposIngresos" Multiplicity="0..1" />
+    <End Role="RegistroTransacciones" Type="Self.RegistroTransacciones" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="TiposIngresos">
+        <PropertyRef Name="Id_TipoIngreso" />
+      </Principal>
+      <Dependent Role="RegistroTransacciones">
+        <PropertyRef Name="Id_TipoIngreso" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__RegistroT__Id_Ti__36B12243">
+    <End Role="TiposDeducciones" Type="Self.TiposDeducciones" Multiplicity="0..1" />
+    <End Role="RegistroTransacciones" Type="Self.RegistroTransacciones" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="TiposDeducciones">
+        <PropertyRef Name="Id_TipoDeduccion" />
+      </Principal>
+      <Dependent Role="RegistroTransacciones">
+        <PropertyRef Name="Id_TipoDeduccion" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <EntityContainer Name="PayrollerEntities" annotation:LazyLoadingEnabled="true">
+    <EntitySet Name="Departamentos" EntityType="Self.Departamentos" />
+    <EntitySet Name="Empleados" EntityType="Self.Empleados" />
+    <EntitySet Name="NivelesRiesgo" EntityType="Self.NivelesRiesgo" />
+    <EntitySet Name="Puestos" EntityType="Self.Puestos" />
+    <EntitySet Name="RegistroTransacciones" EntityType="Self.RegistroTransacciones" />
+    <EntitySet Name="sysdiagrams" EntityType="Self.sysdiagrams" />
+    <EntitySet Name="TiposDeducciones" EntityType="Self.TiposDeducciones" />
+    <EntitySet Name="TiposIngresos" EntityType="Self.TiposIngresos" />
+    <EntitySet Name="TiposNominas" EntityType="Self.TiposNominas" />
+    <AssociationSet Name="FK__Empleados__Id_De__300424B4" Association="Self.FK__Empleados__Id_De__300424B4">
+      <End Role="Departamentos" EntitySet="Departamentos" />
+      <End Role="Empleados" EntitySet="Empleados" />
+    </AssociationSet>
+    <AssociationSet Name="FK__Empleados__Id_Pu__30F848ED" Association="Self.FK__Empleados__Id_Pu__30F848ED">
+      <End Role="Puestos" EntitySet="Puestos" />
+      <End Role="Empleados" EntitySet="Empleados" />
+    </AssociationSet>
+    <AssociationSet Name="FK__Empleados__Id_Ti__31EC6D26" Association="Self.FK__Empleados__Id_Ti__31EC6D26">
+      <End Role="TiposNominas" EntitySet="TiposNominas" />
+      <End Role="Empleados" EntitySet="Empleados" />
+    </AssociationSet>
+    <AssociationSet Name="FK__RegistroT__Id_Em__34C8D9D1" Association="Self.FK__RegistroT__Id_Em__34C8D9D1">
+      <End Role="Empleados" EntitySet="Empleados" />
+      <End Role="RegistroTransacciones" EntitySet="RegistroTransacciones" />
+    </AssociationSet>
+    <AssociationSet Name="FK__Puestos__Id_Nive__239E4DCF" Association="Self.FK__Puestos__Id_Nive__239E4DCF">
+      <End Role="NivelesRiesgo" EntitySet="NivelesRiesgo" />
+      <End Role="Puestos" EntitySet="Puestos" />
+    </AssociationSet>
+    <AssociationSet Name="FK__RegistroT__Id_Ti__35BCFE0A" Association="Self.FK__RegistroT__Id_Ti__35BCFE0A">
+      <End Role="TiposIngresos" EntitySet="TiposIngresos" />
+      <End Role="RegistroTransacciones" EntitySet="RegistroTransacciones" />
+    </AssociationSet>
+    <AssociationSet Name="FK__RegistroT__Id_Ti__36B12243" Association="Self.FK__RegistroT__Id_Ti__36B12243">
+      <End Role="TiposDeducciones" EntitySet="TiposDeducciones" />
+      <End Role="RegistroTransacciones" EntitySet="RegistroTransacciones" />
+    </AssociationSet>
+  </EntityContainer>
+</Schema>
