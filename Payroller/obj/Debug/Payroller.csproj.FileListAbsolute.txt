@@ -1,0 +1,45 @@
+c:\users\20142727\documents\visual studio 2013\Projects\Payroller\Payroller\bin\Debug\Payroller.exe.config
+c:\users\20142727\documents\visual studio 2013\Projects\Payroller\Payroller\bin\Debug\Payroller.exe
+c:\users\20142727\documents\visual studio 2013\Projects\Payroller\Payroller\bin\Debug\Payroller.pdb
+c:\users\20142727\documents\visual studio 2013\Projects\Payroller\Payroller\obj\Debug\Payroller.csprojResolveAssemblyReference.cache
+c:\users\20142727\documents\visual studio 2013\Projects\Payroller\Payroller\obj\Debug\Payroller.Login.resources
+c:\users\20142727\documents\visual studio 2013\Projects\Payroller\Payroller\obj\Debug\Payroller.Principal.resources
+c:\users\20142727\documents\visual studio 2013\Projects\Payroller\Payroller\obj\Debug\Payroller.Properties.Resources.resources
+c:\users\20142727\documents\visual studio 2013\Projects\Payroller\Payroller\obj\Debug\Payroller.csproj.GenerateResource.Cache
+c:\users\20142727\documents\visual studio 2013\Projects\Payroller\Payroller\obj\Debug\Payroller.exe
+c:\users\20142727\documents\visual studio 2013\Projects\Payroller\Payroller\obj\Debug\Payroller.pdb
+C:\Users\Juan Ernesto\Documents\Visual Studio 2013\Projects\Payroller\Payroller\obj\Debug\Payroller.exe
+C:\Users\Juan Ernesto\Documents\Visual Studio 2013\Projects\Payroller\Payroller\obj\Debug\Payroller.pdb
+C:\Users\Juan Ernesto\Documents\Visual Studio 2013\Projects\Payroller\Payroller\obj\Debug\Payroller.csprojResolveAssemblyReference.cache
+C:\Users\Juan Ernesto\Documents\Visual Studio 2013\Projects\Payroller\Payroller\obj\Debug\Payroller.Empleados.resources
+C:\Users\Juan Ernesto\Documents\Visual Studio 2013\Projects\Payroller\Payroller\obj\Debug\Payroller.Login.resources
+C:\Users\Juan Ernesto\Documents\Visual Studio 2013\Projects\Payroller\Payroller\obj\Debug\Payroller.Principal.resources
+C:\Users\Juan Ernesto\Documents\Visual Studio 2013\Projects\Payroller\Payroller\obj\Debug\Payroller.Properties.Resources.resources
+C:\Users\Juan Ernesto\Documents\Visual Studio 2013\Projects\Payroller\Payroller\obj\Debug\Payroller.csproj.GenerateResource.Cache
+C:\Users\Juan Ernesto\Documents\Visual Studio 2013\Projects\Payroller\Payroller\bin\Debug\Payroller.exe
+C:\Users\Juan Ernesto\Documents\Visual Studio 2013\Projects\Payroller\Payroller\bin\Debug\Payroller.pdb
+C:\Users\Juan Ernesto\Documents\Visual Studio 2013\Projects\Payroller\Payroller\bin\Debug\EntityFramework.dll
+C:\Users\Juan Ernesto\Documents\Visual Studio 2013\Projects\Payroller\Payroller\bin\Debug\EntityFramework.SqlServer.dll
+C:\Users\Juan Ernesto\Documents\Visual Studio 2013\Projects\Payroller\Payroller\bin\Debug\EntityFramework.xml
+C:\Users\Juan Ernesto\Documents\Visual Studio 2013\Projects\Payroller\Payroller\bin\Debug\EntityFramework.SqlServer.xml
+C:\Users\Juan Ernesto\Documents\Visual Studio 2013\Projects\Payroller\Payroller\obj\Debug\Payroller.Departamentos.resources
+C:\Users\Juan Ernesto\Documents\Visual Studio 2013\Projects\Payroller\Payroller\obj\Debug\Payroller.Puestos.resources
+C:\Users\Juan Ernesto\OneDrive\Documents\College\7th Program\Propietaria\Payroller\Payroller\obj\Debug\Payroller.exe
+C:\Users\Juan Ernesto\OneDrive\Documents\College\7th Program\Propietaria\Payroller\Payroller\obj\Debug\Payroller.pdb
+C:\Users\ENVY\Documents\UNAPEC\7mo\Propietaria1\Payroller\Payroller\obj\Debug\Payroller.exe
+C:\Users\ENVY\Documents\UNAPEC\7mo\Propietaria1\Payroller\Payroller\obj\Debug\Payroller.pdb
+C:\Users\ENVY\Documents\UNAPEC\7mo\Propietaria1\Payroller\Payroller\bin\Debug\Payroller.exe
+C:\Users\ENVY\Documents\UNAPEC\7mo\Propietaria1\Payroller\Payroller\bin\Debug\Payroller.pdb
+C:\Users\ENVY\Documents\UNAPEC\7mo\Propietaria1\Payroller\Payroller\bin\Debug\EntityFramework.dll
+C:\Users\ENVY\Documents\UNAPEC\7mo\Propietaria1\Payroller\Payroller\bin\Debug\EntityFramework.SqlServer.dll
+C:\Users\ENVY\Documents\UNAPEC\7mo\Propietaria1\Payroller\Payroller\bin\Debug\EntityFramework.xml
+C:\Users\ENVY\Documents\UNAPEC\7mo\Propietaria1\Payroller\Payroller\bin\Debug\EntityFramework.SqlServer.xml
+C:\Users\ENVY\Documents\UNAPEC\7mo\Propietaria1\Payroller\Payroller\obj\Debug\Payroller.csprojResolveAssemblyReference.cache
+C:\Users\ENVY\Documents\UNAPEC\7mo\Propietaria1\Payroller\Payroller\obj\Debug\Payroller.Departamentos.resources
+C:\Users\ENVY\Documents\UNAPEC\7mo\Propietaria1\Payroller\Payroller\obj\Debug\Payroller.Empleados.resources
+C:\Users\ENVY\Documents\UNAPEC\7mo\Propietaria1\Payroller\Payroller\obj\Debug\Payroller.Login.resources
+C:\Users\ENVY\Documents\UNAPEC\7mo\Propietaria1\Payroller\Payroller\obj\Debug\Payroller.Principal.resources
+C:\Users\ENVY\Documents\UNAPEC\7mo\Propietaria1\Payroller\Payroller\obj\Debug\Payroller.Properties.Resources.resources
+C:\Users\ENVY\Documents\UNAPEC\7mo\Propietaria1\Payroller\Payroller\obj\Debug\Payroller.Puestos.resources
+C:\Users\ENVY\Documents\UNAPEC\7mo\Propietaria1\Payroller\Payroller\obj\Debug\Payroller.csproj.GenerateResource.Cache
+C:\Users\ENVY\Documents\UNAPEC\7mo\Propietaria1\Payroller\Payroller\bin\Debug\Payroller.exe.config
